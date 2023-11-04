@@ -1,81 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Airport Lives</title>
+    <title>Multiple YT Videos</title>
     <style>
         body {
-            background-color: grey;
+            background-color: rgb(0, 0, 0);
         }
 
         h1 {
             text-align: center;
+            color: white; /* Make the text white */
         }
 
         .iframe-group {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
         }
 
         .iframe-container {
-            margin: 20px;
-            text-align: center;
+            margin: 5px;
+            text-align: left;
+            width: 33%;
+        }
+
+        .input-buttons {
+            display: flex;
+            justify-content: flex-start;
         }
 
         input, button {
-            margin: 10px 0;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Airport Lives</h1>
+    <h1>Multiple YT Videos</h1>
 
     <div class="iframe-group">
         <div class="iframe-container">
-            <input type="text" id="urlInput1" placeholder="Enter YouTube URL">
-            <button onclick="loadVideo('iframe1', 'urlInput1')">Load Video</button>
-            <br>
-            <iframe id="iframe1" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+            <div class="input-buttons">
+                <input type="text" id="urlInput1" placeholder="Enter YouTube URL and press 'Load'">
+                <button onclick="loadVideo('iframe1', 'urlInput1')">Load</button>
+                <button onclick="clearInput('iframe1', 'urlInput1')">Clear</button>
+            </div>
+            <iframe id="iframe1" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
 
-        <div class="iframe-container">
-            <input type="text" id="urlInput2" placeholder="Enter YouTube URL">
-            <button onclick="loadVideo('iframe2', 'urlInput2')">Load Video</button>
-            <br>
-            <iframe id="iframe2" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+		<div class="iframe-container">
+            <div class="input-buttons">
+                <input type="text" id="urlInput2" placeholder="Enter YouTube URL and press 'Load'">
+                <button onclick="loadVideo('iframe2', 'urlInput2')">Load</button>
+                <button onclick="clearInput('iframe2', 'urlInput2')">Clear</button>
+            </div>
+            <iframe id="iframe2" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
-    </div>
+		
+		<br><br>
 
-    <div class="iframe-group">
-        <div class="iframe-container">
-            <input type="text" id="urlInput3" placeholder="Enter YouTube URL">
-            <button onclick="loadVideo('iframe3', 'urlInput3')">Load Video</button>
-            <br>
-            <iframe id="iframe3" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div class="iframe-container">
-            <input type text" id="urlInput4" placeholder="Enter YouTube URL">
-            <button onclick="loadVideo('iframe4', 'urlInput4')">Load Video</button>
-            <br>
-            <iframe id="iframe4" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <div class="iframe-group">
-        <div class="iframe-container">
-            <input type="text" id="urlInput5" placeholder="Enter YouTube URL">
-            <button onclick="loadVideo('iframe5', 'urlInput5')">Load Video</button>
-            <br>
-            <iframe id="iframe5" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+		<div class="iframe-container">
+            <div class="input-buttons">
+                <input type="text" id="urlInput3" placeholder="Enter YouTube URL and press 'Load'">
+                <button onclick="loadVideo('iframe3', 'urlInput3')">Load</button>
+                <button onclick="clearInput('iframe3', 'urlInput3')">Clear</button>
+            </div>
+            <iframe id="iframe3" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
 
-        <div class="iframe-container">
-            <input type="text" id="urlInput6" placeholder="Enter YouTube URL">
-            <button onclick="loadVideo('iframe6', 'urlInput6')">Load Video</button>
-            <br>
-            <iframe id="iframe6" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+		<div class="iframe-container">
+            <div class="input-buttons">
+                <input type="text" id="urlInput4" placeholder="Enter YouTube URL and press 'Load'">
+                <button onclick="loadVideo('iframe4', 'urlInput4')">Load</button>
+                <button onclick="clearInput('iframe4', 'urlInput4')">Clear</button>
+            </div>
+            <iframe id="iframe4" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
+
+		<br><br>
+		
+		<div class="iframe-container">
+            <div class="input-buttons">
+                <input type="text" id="urlInput5" placeholder="Enter YouTube URL and press 'Load'">
+                <button onclick="loadVideo('iframe5', 'urlInput5')">Load</button>
+                <button onclick="clearInput('iframe5', 'urlInput5')">Clear</button>
+            </div>
+            <iframe id="iframe5" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+		<div class="iframe-container">
+            <div class="input-buttons">
+                <input type="text" id="urlInput6" placeholder="Enter YouTube URL and press 'Load'">
+                <button onclick="loadVideo('iframe6', 'urlInput6')">Load</button>
+                <button onclick="clearInput('iframe6', 'urlInput6')">Clear</button>
+            </div>
+            <iframe id="iframe6" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
+        </div>
+		
+		<br><br>
+
+
+
+
+        <!-- Repeat the same structure for other iframes -->
     </div>
 
     <script>
@@ -91,6 +118,13 @@
             } else {
                 alert("Invalid YouTube URL. Please enter a valid YouTube video URL.");
             }
+        }
+
+        function clearInput(iframeId, inputId) {
+            var iframe = document.getElementById(iframeId);
+            var urlInput = document.getElementById(inputId);
+            urlInput.value = "";  // Clear the input field
+            iframe.src = "about:blank";  // Clear the iframe and display the initial message
         }
     </script>
 </body>
