@@ -2,6 +2,10 @@
 <html>
 <head>
     <title>iframeVideos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <style>
         body {
             background-color: rgb(0, 0, 0);
@@ -9,7 +13,7 @@
 
         h1 {
             text-align: center;
-            color: white; /* Make the text white */
+            color: white;
         }
 
         .iframe-group {
@@ -42,8 +46,8 @@
         <div class="iframe-container">
             <div class="input-buttons">
                 <input type="text" id="urlInput1" placeholder="Enter YouTube URL and press 'Load'">
-                <button onclick="loadVideo('iframe1', 'urlInput1')">Load</button>
-                <button onclick="clearInput('iframe1', 'urlInput1')">Clear</button>
+                <button class="btn btn-primary" onclick="loadVideo('iframe1', 'urlInput1')">Load</button>
+                <button class="btn btn-info" onclick="clearInput('iframe1', 'urlInput1')">Clear</button>
             </div>
             <iframe id="iframe1" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -51,19 +55,17 @@
 		<div class="iframe-container">
             <div class="input-buttons">
                 <input type="text" id="urlInput2" placeholder="Enter YouTube URL and press 'Load'">
-                <button onclick="loadVideo('iframe2', 'urlInput2')">Load</button>
-                <button onclick="clearInput('iframe2', 'urlInput2')">Clear</button>
+                <button class="btn btn-primary" onclick="loadVideo('iframe2', 'urlInput2')">Load</button>
+                <button class="btn btn-info" onclick="clearInput('iframe2', 'urlInput2')">Clear</button>
             </div>
             <iframe id="iframe2" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
-		
-		<br><br>
 
 		<div class="iframe-container">
             <div class="input-buttons">
                 <input type="text" id="urlInput3" placeholder="Enter YouTube URL and press 'Load'">
-                <button onclick="loadVideo('iframe3', 'urlInput3')">Load</button>
-                <button onclick="clearInput('iframe3', 'urlInput3')">Clear</button>
+                <button class="btn btn-primary" onclick="loadVideo('iframe3', 'urlInput3')">Load</button>
+                <button class="btn btn-info" onclick="clearInput('iframe3', 'urlInput3')">Clear</button>
             </div>
             <iframe id="iframe3" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -71,19 +73,17 @@
 		<div class="iframe-container">
             <div class="input-buttons">
                 <input type="text" id="urlInput4" placeholder="Enter YouTube URL and press 'Load'">
-                <button onclick="loadVideo('iframe4', 'urlInput4')">Load</button>
-                <button onclick="clearInput('iframe4', 'urlInput4')">Clear</button>
+                <button class="btn btn-primary" onclick="loadVideo('iframe4', 'urlInput4')">Load</button>
+                <button class="btn btn-info" onclick="clearInput('iframe4', 'urlInput4')">Clear</button>
             </div>
             <iframe id="iframe4" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
 
-		<br><br>
-		
 		<div class="iframe-container">
             <div class="input-buttons">
                 <input type="text" id="urlInput5" placeholder="Enter YouTube URL and press 'Load'">
-                <button onclick="loadVideo('iframe5', 'urlInput5')">Load</button>
-                <button onclick="clearInput('iframe5', 'urlInput5')">Clear</button>
+                <button class="btn btn-primary" onclick="loadVideo('iframe5', 'urlInput5')">Load</button>
+                <button class="btn btn-info" onclick="clearInput('iframe5', 'urlInput5')">Clear</button>
             </div>
             <iframe id="iframe5" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
@@ -91,14 +91,11 @@
 		<div class="iframe-container">
             <div class="input-buttons">
                 <input type="text" id="urlInput6" placeholder="Enter YouTube URL and press 'Load'">
-                <button onclick="loadVideo('iframe6', 'urlInput6')">Load</button>
-                <button onclick="clearInput('iframe6', 'urlInput6')">Clear</button>
+                <button class="btn btn-primary" onclick="loadVideo('iframe6', 'urlInput6')">Load</button>
+                <button class="btn btn-info" onclick="clearInput('iframe6', 'urlInput6')">Clear</button>
             </div>
             <iframe id="iframe6" width="560" height="315" src="about:blank" frameborder="0" allowfullscreen></iframe>
         </div>
-		
-	<br><br>
-
         <!-- Repeat the same structure for other iframes -->
     </div>
 
